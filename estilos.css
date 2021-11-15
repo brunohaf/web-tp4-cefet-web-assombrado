@@ -169,6 +169,8 @@ main {
 
 /* --- Principal >> Nuvem de tags --- */
 aside {
+  position: sticky;
+  top: 0;
   box-sizing: border-box;
   float: right;
   width: 300px;
@@ -309,4 +311,31 @@ footer .logo-rodape {
   color: black;
   border-color: currentColor;
   box-shadow: none;
+}
+
+.boo{
+  position: absolute;
+  width: 40px;
+  display: inline-block;
+  opacity: 0.2;
+  transition:  opacity 1s linear;
+}
+
+.boo:hover{
+opacity: 1;
+}
+
+.boo-1{
+  right: 160px;
+  transform: scaleX(-1);
+  top: 360px;
+}
+.boo-2{
+  left: 250px;
+  bottom: 450px;
+}
+.boo-3{
+  right: 500px;
+  transform: scaleX(-1);
+  bottom: 240px;
 }
