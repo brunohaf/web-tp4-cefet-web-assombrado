@@ -65,7 +65,7 @@ a:active {
 
 
 /* --- Conteúdo principal da página --- */
-#conteudo-principal {
+main {
   padding-left: 2.5%;
   transition: opacity 1s linear;
   padding-bottom: 3em;
@@ -83,7 +83,7 @@ a:active {
   margin-bottom: 1em;
 }
 
-#posts-principais .post {
+#posts-principais article {
   width: 40%;
   max-width: 400px;
   margin-left: 2.5%;
@@ -91,11 +91,11 @@ a:active {
   display: inline-block;
 }
 
-#posts-principais .post .titulo {
+#posts-principais article .titulo {
   text-shadow: 1px 1px black;
 }
 
-#posts-principais .post img {
+#posts-principais article img {
   width: 100%;
   max-width: 400px;
   box-sizing: border-box;
@@ -112,12 +112,12 @@ a:active {
   margin-bottom: 1em;
 }
 
-#ultimas-postagens .post {
+#ultimas-postagens article {
   margin-top: 1em;
   margin-bottom: 1em;
 }
 
-#ultimas-postagens .post .data-horario {
+#ultimas-postagens article time {
   background-color: white;
   color: #333;
   border: 1px solid black;
@@ -137,7 +137,8 @@ a:active {
 
 
 /* --- Principal >> Nuvem de tags --- */
-#tags {
+aside {
+  box-sizing: border-box;
   float: right;
   width: 300px;
   padding: 15px;
@@ -164,6 +165,7 @@ a:active {
   background-color: orange;
   color: white;
   text-shadow: 1px 1px black;
+  cursor:pointer;
 }
 
 .tag-2 {
@@ -174,18 +176,36 @@ a:active {
   font-size: 150%;
 }
 
+.clickable:active {
+  position: relative; right: 2px; bottom: 2px 
+}
 
+.novidade::before {
+  content: "Novidade!";
+  display: inline-block;
+  border-radius: 5px;
+  padding: 3px;
+  background: rgb(29, 126, 42);
+  animation: novidade-animation 600ms ease-in-out 0s infinite alternate;
+}
 
-
+@keyframes novidade-animation {
+ from{
+   transform: scale(0.95)
+ }
+ to{
+   transform: scale(1.1)
+ }
+}
 
 /* --- Rodapé --- */
-#rodape {
+footer {
   background-color: rgba(0, 0, 0, .7);
   padding: 1em;
   display: flex;
 }
 
-#rodape .logo-rodape {
+footer .logo-rodape {
   margin-right: 2em;
 }
 
